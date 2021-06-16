@@ -1,0 +1,9 @@
+{
+    "name": "coco",
+    "version": "1.0.0",
+    "main": "my_node.js",
+    "license": "MIT",
+    "dependencies": {
+        "superagent": "^6.1.0"
+    }
+}
