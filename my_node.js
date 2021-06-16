@@ -10,8 +10,9 @@ const config = {
     sckey: 'SCU112370Tca31e41b7ef263e33e210b76f5a19f465f543cc1f3dac',
     qmsgKey: '369494009d69fc0aa51ed11c8314999a',
     qmsgUrl: 'https://qmsg.zendee.cn/send/',
+    qq: '986244073',
 };
-const { qmsgKey, qmsgUrl, cocoUrl, cocoToken } = config;
+const { qmsgKey, qmsgUrl, cocoUrl, cocoToken, qq } = config;
 const Send2Q = async text => {
     const sendUrl = `${qmsgUrl + qmsgKey}?msg=${encodeURI(text)}`;
     await request.get(sendUrl);
@@ -26,6 +27,20 @@ const QianDao = async () => {
         Send2Q(`\n---${date.toLocaleString()}---\nCoCo签到失败!\n`);
     }
 };
+
+const QianDaoHuiYuan = async () => {
+    try {
+        const date = new Date();
+        const res = await request.get(`https://www.skfiy.com/act/?n=${qq}`);
+        const data = JSON.parse(res.text);
+        Send2Q(`\n---${date.toLocaleString()}---\n会员签到成功!\n` + data.result);
+    } catch (err) {
+        Send2Q(`\n---${date.toLocaleString()}---\n会员签到失败!\n`);
+    }
+};
 QianDao().then(() => {
-    console.log(`我在${new Date().toISOString()}执行了一次`);
+    console.log(`我在${new Date().toISOString()}执行了coco一次`);
+});
+QianDaoHuiYuan().then(() => {
+    console.log(`我在${new Date().toISOString()}执行了会员一次`);
 });
