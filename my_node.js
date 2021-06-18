@@ -33,9 +33,9 @@ const QianDaoHuiYuan = async () => {
         const date = new Date();
         const res = await request.get(`https://www.skfiy.com/act/?n=${qq}`);
         const data = JSON.parse(res.text);
-        Send2Q(`\n---${date.toLocaleString()}---\n会员签到成功!\n` + data.result);
+        Send2Q(`---${date.toLocaleString()}---\n会员签到成功!\n` + JSON.stringify(data));
     } catch (err) {
-        Send2Q(`\n---${date.toLocaleString()}---\n会员签到失败!\n`);
+        Send2Q(`---${date.toLocaleString()}---\n会员签到失败!\n`);
     }
 };
 QianDao().then(() => {
