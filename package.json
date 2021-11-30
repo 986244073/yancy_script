@@ -4,7 +4,6 @@
     "main": "my_node.js",
     "license": "MIT",
     "dependencies": {
-        "axios": "^0.24.0",
-        "superagent": "^6.1.0"
+        "axios": "^0.24.0"
     }
 }
