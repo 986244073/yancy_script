@@ -1,13 +1,7 @@
-# 每天签到
-
-## build
-
-```bash
-docker build -t docker_node .
-```
+# coco每天签到
 
 ## run
 
 ```bash
-docker run -it --name docker-node docker-node
+ql repo https://github.com/986244073/coco_day "coco_" "" "sendNotify.js"
 ```
