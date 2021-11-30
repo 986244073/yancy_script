@@ -16,7 +16,7 @@ const dailyCoCoUrl = 'https://cococloudapi.xyz/api/user/checkin';
     });
     console.log(data.result);
     if (data.ret == 0) {
-        await notify.sendNotify(`${$.name} \n ${data.result}`);
+        await notify.sendNotify(`${$.name} \n ,${data.result}`);
     }
 })();
 // prettier-ignore
