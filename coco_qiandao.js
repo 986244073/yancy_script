@@ -4,11 +4,8 @@ Last Modified time: 2020-11-20 14:11:01
  */
 const $ = new Env('coco云每天签到');
 const axios = require('axios');
-let token = process.env.CoCoToken
-    ? process.env.CoCoToken
-    : 'fDnIrxt8Y7alsK35eyNJSOmjd9M1BvwW88Z1Oe7IHsLKbNdpGBXE4xfg3c6Zi2jH';
+let token = process.env.CoCoToken ? process.env.CoCoToken : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
-//Node.js用户请在jdCookie.js处填写京东ck;
 const dailyCoCoUrl = 'https://cococloudapi.xyz/api/user/checkin';
 
 (async () => {
