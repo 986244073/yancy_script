@@ -21,8 +21,8 @@ const sendBot = async (text) => {
 };
 
 (async () => {
-    const {data}= await request.get(dailyCoCoUrl).send({ 'access-token': token })
-    console.log(data.result);
+    const {body}= await request.get(dailyCoCoUrl).send({ 'access-token': token })
+    console.log(body.result);
     await sendBot(`${$.name} \n ,${JSON.stringify(data)}`);
 })();
 // prettier-ignore
