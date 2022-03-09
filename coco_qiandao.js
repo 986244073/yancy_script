@@ -7,7 +7,7 @@ const request = require('superagent')
 //const charset = require('superagent-charset');
 require('superagent-charset')(request)
 
-let token = process.env.CoCoToken ? process.env.CoCoToken : 'W34zegyW00JPLAnI1gBUdifgUw9IpEgQOymyPYHhJp4TMU8OMZWnZ90VCTSznIfh';
+let token = process.env.CoCoToken ? process.env.CoCoToken : '';
 const dailyCoCoUrl = 'https://cococloudapi.xyz/api/user/checkin';
 
 const sendBot = async (text) => {

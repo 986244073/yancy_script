@@ -1,5 +1,5 @@
 import requests
-token ="W34zegyW00JPLAnI1gBUdifgUw9IpEgQOymyPYHhJp4TMU8OMZWnZ90VCTSznIfh"
+token =""
 header={
     'access-token': token
 }
