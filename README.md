@@ -3,5 +3,5 @@
 ## run
 
 ```bash
-ql repo https://github.com/986244073/coco_day "coco_" "" "sendNotify.js"
+ql repo https://github.com/986244073/yancy_script "coco_" "" "sendNotify.js"
 ```
